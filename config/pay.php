@@ -6,7 +6,7 @@ return [
     'alipay' => [
         'app_id' => '',
         'ali_public_key' => '',
-        'driver' => Gd\Pay\AliPay::class,
+        'driver' => Wtf10029\Pay\AliPay::class,
         'private_key' =>'',
         'log' => [
             'file' => BASE_PATH . '/runtime/logs/alipay.log',
@@ -18,7 +18,7 @@ return [
     'wechat' => [
         'app_id' =>'',
         'mch_id' => '',
-        'driver' => Gd\Pay\WeChatPay::class,
+        'driver' => Wtf10029\Pay\WeChatPay::class,
         'key' => '',
         'notify_url' =>'',
         'cert_client' => BASE_PATH . '/resources/wechat_pay/apiclient_cert.pem',
