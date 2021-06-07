@@ -1,12 +1,9 @@
 <?php
 
 
-namespace Gd\Pay;
+namespace Wtf10029\Pay;
 
 
-use Yansongda\Pay\Exceptions\GatewayException;
-use Yansongda\Pay\Exceptions\InvalidArgumentException;
-use Yansongda\Pay\Exceptions\InvalidSignException;
 use Yansongda\Pay\Pay;
 
 class WeChatPay implements PayInterFace

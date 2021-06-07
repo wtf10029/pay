@@ -6,7 +6,7 @@
  * Time: 17:34
  */
 
-namespace Gd\Pay;
+namespace Wtf10029\Pay;
 
 
 use Yansongda\Pay\Pay;

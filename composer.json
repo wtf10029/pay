@@ -1,5 +1,5 @@
 {
-    "name": "gd/pay",
+    "name": "wtf10029/pay",
     "description": "pay",
     "type": "library",
     "license": "MIT",
@@ -9,7 +9,7 @@
     },
     "autoload":{
         "psr-4":{
-            "Gd\\Pay":"src/"
+            "Wtf10029\\Pay":"src/"
         }
     }
 

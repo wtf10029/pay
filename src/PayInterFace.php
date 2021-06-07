@@ -1,6 +1,6 @@
 <?php
 
-namespace Gd\Pay;
+namespace Wtf10029\Pay;
 
 interface PayInterFace
 {
