@@ -9,7 +9,7 @@ return [
         'driver' => Wtf10029\Pay\AliPay::class,
         'private_key' =>'',
         'log' => [
-            'file' => BASE_PATH . '/runtime/logs/alipay.log',
+            'file' => __DIR__ . '/runtime/logs/alipay.log',
         ],
         'mode' => 'dev',
         'notify_url' => '',
@@ -21,10 +21,10 @@ return [
         'driver' => Wtf10029\Pay\WeChatPay::class,
         'key' => '',
         'notify_url' =>'',
-        'cert_client' => BASE_PATH . '/resources/wechat_pay/apiclient_cert.pem',
-        'cert_key' => BASE_PATH . '/resources/wechat_pay/apiclient_key.pem',
+        'cert_client' => __DIR__ . '/resources/wechat_pay/apiclient_cert.pem',
+        'cert_key' => __DIR__ . '/resources/wechat_pay/apiclient_key.pem',
         'log' => [
-            'file' => BASE_PATH . '/runtime/logs/wechat_pay.log',
+            'file' => __DIR__ . '/runtime/logs/wechat_pay.log',
         ],
     ],
 ];
