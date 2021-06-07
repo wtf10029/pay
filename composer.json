@@ -1,0 +1,16 @@
+{
+    "name": "gd/pay",
+    "description": "pay",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {
+        "yansongda/pay": "~2.10.2"
+    },
+    "autoload":{
+        "psr-4":{
+            "Gd\\Pay":"src/"
+        }
+    }
+
+}
