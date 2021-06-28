@@ -4,7 +4,6 @@
 namespace Wtf10029\Pay;
 
 
-
 class PayFactory
 {
 
@@ -14,21 +13,19 @@ class PayFactory
 
     public function __construct()
     {
-        $this->configs = dirname(__DIR__).'/config/pay.php';
+        $this->configs = require dirname(__DIR__) . '/config/pay.php';
 
-        foreach ($this->configs as $key => $item)
-        {
+        foreach ($this->configs as $key => $item) {
             $driverClass = $item['driver'];
 
-            if (!class_exists($driverClass))
-            {
+            if (!class_exists($driverClass)) {
                 throw new \Exception(sprintf('[Error] class %s is invalid.', $driverClass));
             }
 
             $driver = new $driverClass($item);
-            if (!$driver instanceof PayInterface)
-            {
-                throw new \Exception(sprintf('[Error] class %s is not instanceof %s.', $driverClass, PayInterface::class));
+            if (!$driver instanceof PayInterface) {
+                throw new \Exception(sprintf('[Error] class %s is not instanceof %s.', $driverClass,
+                    PayInterface::class));
             }
 
             $this->drivers[$key] = $driver;
@@ -44,8 +41,7 @@ class PayFactory
     public function get(string $name)
     {
         $driver = $this->drivers[$name] ?? null;
-        if (!$driver || !$driver instanceof PayInterface)
-        {
+        if (!$driver || !$driver instanceof PayInterface) {
             throw new Exception(sprintf('[Error]  %s is a invalid driver.', $name));
         }
 
@@ -55,6 +51,11 @@ class PayFactory
     public function getConfig($name): array
     {
         return $this->configs[$name] ?? [];
+    }
+
+    public function setConfig($name, $value)
+    {
+        return $this->configs[$name] = $value;
     }
 
 }
