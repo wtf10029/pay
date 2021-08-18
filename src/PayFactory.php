@@ -27,7 +27,6 @@ class PayFactory
                 throw new \Exception(sprintf('[Error] class %s is not instanceof %s.', $driverClass,
                     PayInterface::class));
             }
-
             $this->drivers[$key] = $driver;
         }
     }
