@@ -34,7 +34,7 @@ class WeChatPay implements PayInterFace
                 $result = $this->pay->scan($order);
 
         }
-        // laravel 框架中请直接 return
+        // laravel 框架中请直接
         return $result;
 
     }
