@@ -9,11 +9,43 @@ class PayFactory
 
     protected $drivers = [];
 
-    protected $configs = [];
+    protected $configs = [
+        'alipay' => [
+            'app_id' => '',
+            'ali_public_key' => '',
+            'driver' => AliPay::class,
+            'private_key' =>'',
+            'log' => [
+                'file' => __DIR__ . '/runtime/logs/alipay.log',
+            ],
+            'mode' => 'dev',
+            'cert_client' => __DIR__ . '/resources/wechat_pay/apiclient_cert.pem',
+            'cert_key' => __DIR__ . '/resources/wechat_pay/apiclient_key.pem',
+            'notify_url' => '',
+            'return_url' => '',
+        ],
+        'wechat' => [
+            'app_id' =>'',
+            'mch_id' => '',
+            'driver' =>WeChatPay::class,
+            'key' => '',
+            'notify_url' =>'',
+            'cert_client' => __DIR__ . '/resources/wechat_pay/apiclient_cert.pem',
+            'cert_key' => __DIR__ . '/resources/wechat_pay/apiclient_key.pem',
+            'log' => [
+                'file' => __DIR__ . '/runtime/logs/wechat_pay.log',
+            ],
+        ],
+    ];
 
-    public function __construct()
+    public function __construct($config = [])
     {
-        $this->configs = require dirname(__DIR__) . '/config/pay.php';
+
+        if ($config){
+            $this->configs = array_merge($this->configs, $config);
+        }
+
+//        $this->configs = require dirname(__DIR__) . '/config/pay.php';
 
         foreach ($this->configs as $key => $item) {
             $driverClass = $item['driver'];
