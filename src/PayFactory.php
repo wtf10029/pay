@@ -79,10 +79,7 @@ class PayFactory
         return $driver;
     }
 
-    public function getConfig($name): array
-    {
-        return $this->configs[$name] ?? [];
-    }
+
 
     public function setConfig($name, $value)
     {
