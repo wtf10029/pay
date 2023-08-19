@@ -81,9 +81,5 @@ class PayFactory
 
 
 
-    public function setConfig($name, $value)
-    {
-        return $this->configs[$name] = $value;
-    }
 
 }
