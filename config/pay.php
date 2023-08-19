@@ -11,7 +11,7 @@ return [
         'log' => [
             'file' => __DIR__ . '/runtime/logs/alipay.log',
         ],
-        'mode' => 'dev',
+        'mode' => '',
         'cert_client' => __DIR__ . '/resources/wechat_pay/apiclient_cert.pem',
         'cert_key' => __DIR__ . '/resources/wechat_pay/apiclient_key.pem',
         'notify_url' => '',
