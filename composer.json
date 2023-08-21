@@ -5,7 +5,8 @@
     "license": "MIT",
     "minimum-stability": "dev",
     "require": {
-        "yansongda/pay": "~2.10.2"
+        "yansongda/pay": "~2.10.2",
+        "phpunit/phpunit": "9.6.x-dev"
     },
     "autoload":{
         "psr-4":{
