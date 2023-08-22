@@ -10,7 +10,8 @@
     },
     "autoload":{
         "psr-4":{
-            "Wtf10029\\Pay\\":"src/"
+            "Wtf10029\\Pay\\":"src/",
+            "Wtf10029\\Pay\\Tests\\": "tests/"
         }
     }
 
